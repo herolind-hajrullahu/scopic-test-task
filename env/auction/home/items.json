@@ -1,0 +1,38 @@
+[
+    {
+      "title": "vase",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eleifend vehicula sapien nec tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "image": "image/path/example",
+      "price": 5,
+      "highest_bid": 0,
+      "highest_bidder": "",
+      "auto_bidder": ""
+    },
+    {
+      "title": "hej",
+      "description": "Lorem vase dolor sit amet, consectetur adipiscing elit. Cras eleifend vehicula sapien nec tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "image": "image/path/example",
+      "price": 1,
+      "highest_bid": 0,
+      "highest_bidder": "",
+      "auto_bidder": ""
+    },
+    {
+      "title": "kuje",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eleifend vehicula sapien nec tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "image": "image/path/example",
+      "price": 53,
+      "highest_bid": 0,
+      "highest_bidder": "",
+      "auto_bidder": ""
+    },
+    {
+      "title": "qeti",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eleifend vehicula sapien nec tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "image": "image/path/example",
+      "price": 55,
+      "highest_bid": 0,
+      "highest_bidder": "",
+      "auto_bidder": ""
+    }
+  ]
