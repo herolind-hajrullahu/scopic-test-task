@@ -22,11 +22,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/', home_views.home, name='home'),
     path('item/<slug:title>/', home_views.item_details_page, name='items'),
-    path('login/', home_views.login, name='login'),
-    
-    # path('login/', auth_views.LoginView.as_view(template_name='home/login-page.html'), name='login'),
-    
-    path('search/', home_views.search, name='search'),
+    path('login/<slug:username>/<slug:password>', home_views.login, name='login'),
+    path('search/<slug:filter>', home_views.search, name='search'),
     path('bid/<slug:title>/', home_views.bid, name='bid'),
     path('auto_bid/<slug:title>/<int:max_bid>', home_views.auto_bid, name='auto_bid'),
 ]

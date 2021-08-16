@@ -31,22 +31,16 @@ def item_details_page(request, title):
     return HttpResponse(json.dumps({'message':'No Item Found!!'}), content_type="application/json")
 
 
-def login(request):
-    
-    req_body = request.body.decode('utf-8')
-    body = json.loads(req_body)
+def login(request, username, password):
     for user in users:
-        if user['username'] == body['username'] and user['password'] == body['password'] :
-            encoded_jwt = jwt.encode({"username": body['username'], "password": body['password']}, "secret", algorithm="HS256")
+        if user['username'] == username and user['password'] == password :
+            encoded_jwt = jwt.encode({"username": username, "password": password}, "secret", algorithm="HS256")
             return HttpResponse(json.dumps({"message": "Authorized!"}),status=200)
 
     return HttpResponse(status=401)
 
 
-def search(request):
-    req_body = request.body.decode('utf-8')
-    body = json.loads(req_body)
-    
+def search(request, filter):
     filtered_items = []
     
     for item in items:
@@ -54,7 +48,7 @@ def search(request):
         for k in item:
             if k == 'image':
                 continue
-            if body['filter'] in str(item[k]):
+            if filter in str(item[k]):
                 filtered_items.append(item)
     
     sorted_items = sorted(filtered_items, key=lambda k: k['price'])
